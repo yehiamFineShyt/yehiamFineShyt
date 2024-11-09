@@ -2,6 +2,7 @@ let map;
 let lngArr = '';
 let lngStr ='';
 let lsdata = localStorage.getItem('countriesHome');
+let lsjson = JSON.parse(lsdata);
 
 export default class Country{
     constructor(element)
@@ -87,7 +88,7 @@ export default class Country{
                 a.style.textDecoration = 'underline';
                 
                 
-                let filterdData = JSON.parse(lsdata).filter(i=>i.cca3 == e );
+                let filterdData =lsjson.filter(i=>i.cca3 == e );
                 // console.log(filterdData);
                 
                 a.innerText = filterdData[0].name.common;
@@ -151,9 +152,9 @@ export default class Country{
     static lightboxRender(e){
         document.querySelector('#borders').innerHTML = '';
                     
-                    let filterdData = JSON.parse(lsdata).filter(i=>i.cca3 == e );
+                    let filterdData = lsjson.filter(i=>i.cca3 == e );
                     let c = new Country(filterdData[0]);
-                    filterdData = JSON.parse(lsdata).filter(i=>c.borders.includes(i.cca3));
+                    filterdData = lsjson.filter(i=>c.borders.includes(i.cca3));
                     // console.log(filterdData);
                     
                     filterdData.forEach(i=>c.handleBorders(i));
