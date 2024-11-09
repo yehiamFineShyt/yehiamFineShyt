@@ -51,5 +51,12 @@ main{
     display: inline-block;
     color: rgb(43, 95, 96);
 }
+#borderforimg{
+    border: black 4px solid;
+    width:fit-content;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
 
 

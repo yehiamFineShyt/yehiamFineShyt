@@ -36,7 +36,9 @@ const renderLightBox= ()=>{
     <div id="map" style="width: 500px; height: 500px;"></div>
   </section>
   <section id="section-2">
-  <img id="country-img"  src="images/layers-2x.png">
+  <div id="borderforimg">
+    <img id="country-img"  src="images/layers-2x.png">
+  </div>
   <h2>Good cake</h2>
 <div id="border-div">
         <p id="borders" class="display-6">border with States:</p>
