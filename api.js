@@ -83,21 +83,22 @@ const doApi = async() =>{
         
         
             
-            url = 'https://restcountries.com/v3.1/all?fields=name,capital,currencies,flags,population,cca3,currencies,region,capital,borders,latlng,languages';
-            let resp = await fetch(url);
-            data = await resp.json();
-            data = data.filter(e => e.name.common != 'Palestine');
-        
-        
-                
-                
-            localStorage.setItem('countriesHome', JSON.stringify(data));
-            manageApi(data);
-                
+        url = 'https://restcountries.com/v3.1/all?fields=name,capital,currencies,flags,population,cca3,currencies,region,capital,borders,latlng,languages';
+        let resp = await fetch(url);
+        data = await resp.json();
+        data = data.filter(e => e.name.common != 'Palestine');
+    
+    
+            
+            
+        localStorage.setItem('countriesHome', JSON.stringify(data));
+        manageApi(data);
+            
             }  
-        if(re.test(searchBar.value.trim()))          
+        if(!re.test(searchBar.value.trim())) {       
             document.querySelector('#photos').innerHTML = '<h1 style="color: white;">Could not find the requested country... pls try again</h1>';
 
+        }
     }
        
         
