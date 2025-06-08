@@ -1,7 +1,6 @@
-- 👋 Hi, I’m @yehiamFineShyt
-- 👀 I’m interested in ABGs
+- 👋 Hi, I’m Yehiam
 - 🌱 I’m currently learning CS 
-- 💞️ I’m looking to collaborate on phub
+- 💞️ I’m looking for a takeover
 - 😄 Pronouns: ki / ng
 
 
